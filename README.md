@@ -13,24 +13,24 @@ After cleaning data, I performed some analysis. Here I will show a few graphs th
 ## NINE languages in one movie?
 As expected, most movies only have 1-2 spoken languages. However, there is one outlier with NINE spoken languages in that movie!
 
-![pic](pic/num_languages.PNG)
+![pic](pic/num_languages.png)
 
 ## English dominates the film industry. In other news, water is wet.
 Well. But what is the second most popular language after English? It's... French.
 
-![pic](pic/language.PNG)
+![pic](pic/language.png)
 
 ## How many genres can you fit in one movie?
 
 Most movies are listed with two genres. Specifically, there are 3 movies with SEVEN genres! These movies are: "Jimmy Neutron: Boy Genius", "Fishtales", and "Crossroads". I have not seen any of them, but I guess it is worth a try.
 
-![pic](pic/num_genres.PNG)
+![pic](pic/num_genres.png)
 
 ## Revenue per Year
 
 Film industry is growing like crazy. Apparently, people are making more money from movies than ever. Here is the graph representing revenue per year:
 
-![pic](pic/year.PNG)
+![pic](pic/year.png)
 
 Something seemed to happen in 2017... I don't know honestly. Any idea?
 
@@ -38,13 +38,13 @@ Something seemed to happen in 2017... I don't know honestly. Any idea?
 
 June seems to be the golden month of the year to release movie. Apparently, most blockbusters in our recent memory were released in the summer: Guardians of the Galaxy Vol. 2, Spider-Man: Homecoming, Wonder Woman, etc.
 
-![pic](pic/month.PNG)
+![pic](pic/month.png)
 
 ## What about best day in the week?
 
 Most movies are released on Monday, Tuesday, and Wednesday. There is a clear downward trend in terms of revenue for movies that were released after Wednesday during the release week. 
 
-![pic](pic/day.PNG)
+![pic](pic/day.png)
 
 # Model Building
 
@@ -52,7 +52,7 @@ I am a simple man. If I were to build Machine Learning models for a real life pr
 
 XGBRegressor offers many tuning parameters which can be used to reduce the training time and accuracy significantly. In this project, I implemented XGBoost, added some parameters to my model, then checked for feature importance. I also used the plot_importance function to evaluate the features. Here is the top five:
 
-![pic](pic/features.PNG)
+![pic](pic/features.png)
 
 On top of XGBoost, I also built a CatBoost (my second favorite boost model after XGBoost) model, got predictions from both models, and practiced ensemble by simply taking weighted average of the results. You can check [this notebook](https://nbviewer.jupyter.org/github/andreduong/box-office-prediction/blob/master/box-office-prediction.ipynb) for the codes.
 
