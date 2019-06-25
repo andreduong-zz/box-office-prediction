@@ -2,7 +2,7 @@
 
 ![Header](pic/pic.PNG)
 
-In a world where movies made an estimated $41.7 billion in 2018, the film industry is more popular than ever. But what movies make the most money at the box office? How much does a director matter? Or the budget? Having been following box office as a side hobby for a while, this project was definitely one of my favorites to do. In this project, I practiced data cleaning, exploratory data analysis, data visualization, feature engineering, building various boosting models (XGBoost, CatBoost), and simple ensemble learning. 
+In a world where movies made an estimated $41.7 billion in 2018, the film industry is more popular than ever. But what movies make the most money at the box office? How much does a director matter? Or the budget? Having been following box office as a side hobby for a while, this project was definitely one of my favorites to do. In this project, I practiced data cleaning, exploratory data analysis, data visualization, feature engineering, writing pipelines, dimensionality reduction,  building various boosting models (XGBoost, CatBoost), and simple ensemble learning.
 
 # Data Description
 In this dataset, there are 7398 movies and a variety of metadata obtained from The Movie Database [The Movie Database](https://www.themoviedb.org) (TMDB). Movies are labeled with id. Data points include cast, crew, plot keywords, budget, posters, release dates, languages, production companies, and countries. We will predict the worldwide revenue for 4398 movies in the test file. You can download the dataset [here](https://drive.google.com/drive/folders/1jyIZDHzhgJzZYZoDTVeMMqBU0ZdpGb2d?usp=sharing).
@@ -57,4 +57,4 @@ XGBRegressor offers many tuning parameters which can be used to reduce the train
 On top of XGBoost, I also built a CatBoost (my second favorite boost model after XGBoost) model, got predictions from both models, and practiced ensemble by simply taking weighted average of the results. You can check [this notebook](https://nbviewer.jupyter.org/github/andreduong/box-office-prediction/blob/master/box-office-prediction.ipynb) for the codes.
 
 # Conclusion
-In completing this project, I practiced data wrangling, visualization, learned how to properly implement XGBoost/CatBoost model, and simple ensemble learning to improve performance for the models.
+In this project, I practiced data cleaning, exploratory data analysis, data visualization, feature engineering, writing pipelines, dimensionality reduction,  building various boosting models (XGBoost, CatBoost), and simple ensemble learning.
