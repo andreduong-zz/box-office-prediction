@@ -2,7 +2,19 @@
 
 ![Header](pic/pic.PNG)
 
-In a world where movies made an estimated $41.7 billion in 2018, the film industry is more popular than ever. But what movies make the most money at the box office? How much does a director matter? Or the budget? Having been following box office as a side hobby for a while, this project was definitely one of my favorites to do. In this project, I practiced data cleaning, exploratory data analysis, data visualization, feature engineering, writing pipelines, dimensionality reduction,  building various boosting models (XGBoost, CatBoost), and simple ensemble learning.
+In a world where movies made an estimated $41.7 billion in 2018, the film industry is more popular than ever. But what movies make the most money at the box office? How much does a director matter? Or the budget? Having been following box office as a side hobby for a while, this project was definitely one of my favorites to do. 
+
+In this project, I went through the entire data science lifecycle, including: 
+
+* Data wrangling/preprocessing
+* Exploratory data analysis/Data visualization
+* Feature engineering
+* Pipelines Building
+* Dimensionality reduction with TruncatedSVD
+* Building various boosting models (XGBoost, LightGBM)
+* Applying simple ensemble method (stacking)
+
+You can check full codes in this [notebook](https://github.com/andreduong/box-office-prediction/blob/master/box-office-prediction.ipynb) [NBViewer Link](https://nbviewer.jupyter.org/github/andreduong/box-office-prediction/blob/master/box-office-prediction.ipynb).
 
 # Data Description
 In this dataset, there are 7398 movies and a variety of metadata obtained from The Movie Database [The Movie Database](https://www.themoviedb.org) (TMDB). Movies are labeled with id. Data points include cast, crew, plot keywords, budget, posters, release dates, languages, production companies, and countries. We will predict the worldwide revenue for 4398 movies in the test file. You can download the dataset [here](https://drive.google.com/drive/folders/1jyIZDHzhgJzZYZoDTVeMMqBU0ZdpGb2d?usp=sharing).
@@ -48,13 +60,14 @@ Most movies are released on Monday, Tuesday, and Wednesday. There is a clear dow
 
 # Model Building
 
-I am a simple man. If I were to build Machine Learning models for a real life project, I would choose the best, most powerful, most efficient models that are available. That being said, I decided to hop on the XGBoost hype train for the first time. XGBoost stands for Extreme Gradient Boosting. It is THE favorite Machine Learning algorithm of top Kagglers, and sometimes you can even see people winning Kaggle competitions using ONLY XGBoost.
-
-XGBRegressor offers many tuning parameters which can be used to reduce the training time and accuracy significantly. In this project, I implemented XGBoost, added some parameters to my model, then checked for feature importance. I also used the plot_importance function to evaluate the features. Here is the top five:
+XGBoost is one of, if not the most powerful Machine Learning model that is used widely by top Kagglers. XGBRegressor offers many tuning parameters which can be used to reduce the training time and accuracy significantly. In this project, I implemented XGBoost, added some parameters to my model, then checked for feature importance. I also used the plot_importance function to evaluate the features. Here is the top five:
 
 ![pic](pic/features.png)
 
-On top of XGBoost, I also built a CatBoost (my second favorite boost model after XGBoost) model, got predictions from both models, and practiced ensemble by simply taking weighted average of the results. You can check [this notebook](https://nbviewer.jupyter.org/github/andreduong/box-office-prediction/blob/master/box-office-prediction.ipynb) for the codes.
+On top of XGBoost, I also built a LightGBM (my second favorite boost model after XGBoost) model, got predictions from both models, and practiced simple ensemble method stacking. After stacking two baseline models, my loss score improved from ~1.94 to 1.89.
+
+You can check [this notebook](https://nbviewer.jupyter.org/github/andreduong/box-office-prediction/blob/master/box-office-prediction.ipynb) for full codes.
 
 # Conclusion
-In this project, I practiced data cleaning, exploratory data analysis, data visualization, feature engineering, writing pipelines, dimensionality reduction,  building various boosting models (XGBoost, CatBoost), and simple ensemble learning.
+
+This project is still, to this day, my longest data science project. I learned a lot of new concepts/techniques from doing this project, from coding pipelines, Python OOP, to new powerful boost Machine Learning models (LightGBM, XGBoost) and simple ensemble method (stacking). 
